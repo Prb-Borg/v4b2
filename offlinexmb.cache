@@ -4,6 +4,7 @@ CACHE MANIFEST
 
 index.html
 common\blob.js
+common\exp_jailbreak0.js
 common\exp_jailbreak1.js
 common\exp_jailbreak2.js
 common\exp_jailbreak3.js

@@ -1,12 +1,12 @@
 <html manifest="offlinexmb.cache">
 <head>
-<title>Prb 7.55 Exploit Menu V4B2 SL Test</title>
+<title>Prb 7.55 Exploit Menu V4B2 SL</title>
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));kexmenu.style.display="none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%"};
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";localStorage.isPrbCached=true;},1000);setTimeout(function(){window.msgs.innerHTML="Turn Off The Internet & Re-Open The Browser to Begin";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <body style="background-color:#003791;color:white;font-size:20px;text-align:center;" onload="start1();">
-<h1 id=msgs style='font-size:20px;text-align:center;color:white'>Prb 7.55 Exploit Menu V4B2 SL Test</h1>
+<h1 id=msgs style='font-size:20px;text-align:center;color:white'>Prb 7.55 Exploit Menu V4 SL</h1>
 <div id=dlog></div>
 <div id=expbuttons>
 <button style=opacity:0 id="input1" onfocus="handle2()"></button>
@@ -45,109 +45,103 @@ kexbut2.style.display="none";
 };
 
 </script>
-
-<div id=mymenu style="text-align:center;display:none">
-<div text-align= center>Pass = <span id=passCounter></span>&nbsp;&nbsp;:&nbsp;&nbsp;Fail = <span id=failCounter></span></div>
-<div style="width:100%;font-size:20px;color:white">
-PS4 Firmware <span id="PS4fw"></span></div>
-<div style='font-size:20px;color:yellow;margin-top:5px'>KERNEL EXPLOIT</div>
-</div>
-
-<div id=kexmenu style="text-align:center;display:none">
-<form style="margin-top:-5px"id=form1 onclick=doshit()> 
-Select Kernel Exploit To Use: <input id=v1 type="radio" name="KEX" value="common/exp_jailbreak1.js" onMouseOver="msgs.innerHTML='Latest Kernel Exploit By Sleirsgoevy - 3rd June 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"><label>v1</label>&nbsp;
- <input id=v2 type="radio" name="KEX" value="common/exp_jailbreak2.js" onMouseOver="msgs.innerHTML='Kernel Exploit By Sleirsgoevy - 27th May 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"><label>v2</label>&nbsp;
- <input id=v3 type="radio" name="KEX" value="common/exp_jailbreak3.js" onMouseOver="msgs.innerHTML='Kernel Exploit By Sleirsgoevy - 20th May 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"><label>v3</label>
- </form>
-<form style="margin:-25px 0 5px 0" id=form2 onclick=doshit()>
-Run Kernel Exploit Automatically After Webkit: <input id=a1 type="radio" name="AUTO" value="yes" onMouseOver="msgs.innerHTML='Auto Kernel Exploit ON. This Option Auto loads Webkit & Selected Exploit Automatically'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"><label>ON</label>&nbsp;&nbsp;
- <input id=a2 type="radio" name="AUTO" value="no" onMouseOver="msgs.innerHTML='Auto Kernel Exploit OFF. This Option Allows Manually loading Of Selected Exploit'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"><label>OFF</label><br>
- <button id=kexbut1 onMouseOver="msgs.innerHTML='Kernel Exploit '+localStorage.kexID+' By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_exploit(); return false">Run Manual Kernel Exploit</button><br><br>
- <button id=kexbut2 onclick="start2(); return false">START</button>
-</form>
-</div>
+    <div id=mymenu style="text-align:center;display:none">
+    <div text-align= center>Pass = <span id=passCounter></span>&nbsp;&nbsp;:&nbsp;&nbsp;Fail = <span id=failCounter></span></div>
+    <div style='font-size:20px;color:yellow;margin-top:5px'>KERNEL EXPLOIT</div>
+    </div>
+    <div id=kexmenu style="text-align:center;display:none">
+    <form style="margin-top:-5px"id=form1 onclick=doshit()>
+    Select Kernel Exploit To Use: <input id=v1 type="radio" name="KEX" value="common/exp_jailbreak0.js" onMouseOver="msgs.innerHTML='Latest Kernel Exploit By Sleirsgoevy - 20th July 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>v1</label>&nbsp;
+	<input id=v2 type="radio" name="KEX" value="common/exp_jailbreak1.js" onMouseOver="msgs.innerHTML='Kernel Exploit By Sleirsgoevy - 3rd June 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>v2</label>&nbsp;
+    <input id=v3 type="radio" name="KEX" value="common/exp_jailbreak2.js" onMouseOver="msgs.innerHTML='Kernel Exploit By Sleirsgoevy - 27th May 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>v3</label>&nbsp;
+    <input id=v4 type="radio" name="KEX" value="common/exp_jailbreak3.js" onMouseOver="msgs.innerHTML='Kernel Exploit By Sleirsgoevy - 20th May 2021.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>v4</label>
+    </form>
+    <form style="margin:-25px 0 5px 0" id=form2 onclick=doshit()>
+     Run Kernel Exploit Automatically After Webkit: <input id=a1 type="radio" name="AUTO" value="yes" onMouseOver="msgs.innerHTML='Auto Kernel Exploit ON. This Option Auto loads Webkit & Selected Exploit Automatically When Entering Browser'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>ON</label>&nbsp;&nbsp;
+    <input id=a2 type="radio" name="AUTO" value="no" onMouseOver="msgs.innerHTML='Auto Kernel Exploit OFF. This Option Allows Manually loading Of Selected Exploit. Select Exploit And Press Manual Exploit Button.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"><label>OFF</label><br>
+    <button id=kexbut1 onMouseOver="msgs.innerHTML='Kernel Exploit '+localStorage.kexID+' By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_exploit(); return false">Run Manual Kernel Exploit</button>
+    <button id=kexbut2 onclick="start2(); return false">START</button>
+    </form>
+    </div>
 
     <div id=mymenu2 style="text-align:center;display:none">
 	<div style='font-size:20px;color:yellow'>HEN / MIRA</div>
-	<button onMouseOver="msgs.innerHTML='GoldHen - v1.0 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_goldhen(); return false">GoldHEN v1.0</button>
-	<button onMouseOver="msgs.innerHTML='GoldHen - v1.1 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_goldhenb(); return false">GoldHEN v1.1</button>
-	<button onMouseOver="msgs.innerHTML='HenB - v2.1.3 By SiSTRo / 7.55 By Karo.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_henb(); return false">HenB</button>
-	<button onMouseOver="msgs.innerHTML='Mira - v1 By OpenOrbis.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_mira(); return false">Mira</button>
-	<button onMouseOver="msgs.innerHTML='Mirav2b - 7.55 By Karo'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_mira2b(); return false">Mira2b</button>
+	<button onMouseOver="msgs.innerHTML='GoldHen - v1.0 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_goldhen(); return false">GoldHEN v1.0</button>
+	<button onMouseOver="msgs.innerHTML='GoldHen - v1.1 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_goldhenb(); return false">GoldHEN v1.1</button>
+	<button onMouseOver="msgs.innerHTML='HenB - v2.1.3 By SiSTRo / 7.55 By Karo.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_henb(); return false">HenB</button>
+	<button onMouseOver="msgs.innerHTML='Mira - v1 By OpenOrbis.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_mira(); return false">Mira</button>
+	<button onMouseOver="msgs.innerHTML='Mirav2b - 7.55 By Karo'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_mira2b(); return false">Mira2b</button>
 	<br><div style='font-size:20px;color:yellow'>TOOLS</div>
-	<button onMouseOver="msgs.innerHTML='Orbis Toolbox - 1167 Alpha / By OSM-Made.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_orbistoolbox(); return false">OrbisToolbox</button>
-	<button onMouseOver="msgs.innerHTML='Binloader - By OpenOrbis.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_binloader(); return false">Binloader</button>
-	<button onMouseOver="msgs.innerHTML='App-2-Usb - Original Version By Stooged / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_app2usb(); return false">App2Usb</button>
-	<button onMouseOver="msgs.innerHTML='Ftp v1.3 - Original Version By xVortex / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_ftp(); return false">FTP</button>
-	<button onMouseOver="msgs.innerHTML='FakeUSB v1.0 - By Sleirsgoevy / Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fakeusb() ; return false">Fake USB</button>
-	<button onMouseOver="msgs.innerHTML='Disable-Updates - v1.0 By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_disableupdates(); return false">Disable Updates</button>
-	<button onMouseOver="msgs.innerHTML='Enable-Updates - v1.0 By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_enableupdates(); return false">Enable Updates</button>
-	<button onMouseOver="msgs.innerHTML='History-Blocker - v2.0 Original Version By Stooged / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_historyblocker(); return false">History Blocker</button>
-	<button onMouseOver="msgs.innerHTML='Ps4Debug - By ctn 1.5.4.2 Rev2.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_ps4debug(); return false">Debug</button>
-	<button onMouseOver="msgs.innerHTML='Web Activator By Sleirsgoevy Activates PSN account on jailbroken PS4.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_webactivator(); return false">Web Activator</button>  
-	<button onMouseOver="msgs.innerHTML='Enable Browser / 7.55 Port Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_enablebrowser(); return false">Enable Browser</button>
-	<button onMouseOver="msgs.innerHTML='RIF Renamer By Sleirsgoevy.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_rifrenamer(); return false">Rif-Renamer</button>  
-	<button onMouseOver="msgs.innerHTML='Disabled-ASLR - v1.0 by Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_disableaslr(); return false">Disable-aslr</button>
-	<button onMouseOver="msgs.innerHTML='Exit-IDU MODE (Individual Display Unit) - By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_exitidu(); return false">Exit idu</button>
+	<button onMouseOver="msgs.innerHTML='Orbis Toolbox - 1167 Alpha / By OSM-Made.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_orbistoolbox(); return false">OrbisToolbox</button>
+	<button onMouseOver="msgs.innerHTML='Binloader - By OpenOrbis.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_binloader(); return false">Binloader</button>
+	<button onMouseOver="msgs.innerHTML='App-2-Usb - Original Version By Stooged / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_app2usb(); return false">App2Usb</button>
+	<button onMouseOver="msgs.innerHTML='Ftp v1.3 - Original Version By xVortex / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_ftp(); return false">FTP</button>
+	<button onMouseOver="msgs.innerHTML='FakeUSB v1.0 - By Sleirsgoevy / Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fakeusb() ; return false">Fake USB</button>
+	<button onMouseOver="msgs.innerHTML='Disable-Updates - v1.0 By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_disableupdates(); return false">Disable Updates</button>
+	<button onMouseOver="msgs.innerHTML='Enable-Updates - v1.0 By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_enableupdates(); return false">Enable Updates</button>
+	<button onMouseOver="msgs.innerHTML='History-Blocker - v2.0 Original Version By Stooged / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_historyblocker(); return false">History Blocker</button>
+	<button onMouseOver="msgs.innerHTML='Ps4Debug - By ctn 1.5.4.2 Rev2.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_ps4debug(); return false">Debug</button>
+	<button onMouseOver="msgs.innerHTML='Web Activator By Sleirsgoevy Activates PSN account on jailbroken PS4.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_webactivator(); return false">Web Activator</button>  
+	<button onMouseOver="msgs.innerHTML='Enable Browser / 7.55 Port Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_enablebrowser(); return false">Enable Browser</button>
+	<button onMouseOver="msgs.innerHTML='RIF Renamer By Sleirsgoevy.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_rifrenamer(); return false">Rif-Renamer</button>  
+	<button onMouseOver="msgs.innerHTML='Disabled-ASLR - v1.0 by Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_disableaslr(); return false">Disable-aslr</button>
+	<button onMouseOver="msgs.innerHTML='Exit-IDU MODE (Individual Display Unit) - By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_exitidu(); return false">Exit idu</button>
 	<br><div style='font-size:20px;color:yellow'>BACKUP / RESTORE</div>
-	<button onMouseOver="msgs.innerHTML='DB-Backup v1.0 - By Leeful / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_DBBackup(); return false">DB Backup</button>
-	<button onMouseOver="msgs.innerHTML='Save Data Backup v1.0 - By Leefulp.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_SaveDataBackup(); return false">Save Data Backup</button> 
-	<button onMouseOver="msgs.innerHTML='Trophy Backup v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_TrophyBackup(); return false">Trophy Backup</button> 
-	<button onMouseOver="msgs.innerHTML='Prb 7.55 Exploit Menu Offline Cache Backup.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_OfflineCacheBackup(); return false">Prb 7.55 Cache Backup</button>&nbsp; / &nbsp;
-	<button onMouseOver="msgs.innerHTML='DB-Restore v1.0 - By Leeful / 7.55 Port Al Azif if.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_DBRestore(); return false">DB Restore</button>
-	<button onMouseOver="msgs.innerHTML='Save Data Restore v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_SaveDataRestore(); return false">Save Data Restore</button>
-	<button onMouseOver="msgs.innerHTML='Trophy Backup Restore v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_TrophyRestore(); return false">Trophy Restore</button>
-	<button onMouseOver="msgs.innerHTML='Prb 7.55 Exploit Menu Offline Cache Restore.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_OfflineCacheRestore(); return false">Prb 7.55 Cache Restore</button>
-	<button onMouseOver="msgs.innerHTML='Restore Any Offline Cache v1.0 - By Stooged Restore any ApplicationCache.db from USB Just place the ApplicationCache.db on the root of a usb drive.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_AnyCacheRestore(); return false">Any Cache Restore</button>
+	<button onMouseOver="msgs.innerHTML='DB-Backup v1.0 - By Leeful / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_DBBackup(); return false">DB Backup</button>
+	<button onMouseOver="msgs.innerHTML='Save Data Backup v1.0 - By Leefulp.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_SaveDataBackup(); return false">Save Data Backup</button> 
+	<button onMouseOver="msgs.innerHTML='Trophy Backup v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_TrophyBackup(); return false">Trophy Backup</button> 
+	<button onMouseOver="msgs.innerHTML='Prb 7.55 Exploit Menu Offline Cache Backup.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_OfflineCacheBackup(); return false">Prb 7.55 Cache Backup</button>&nbsp; / &nbsp;
+	<button onMouseOver="msgs.innerHTML='DB-Restore v1.0 - By Leeful / 7.55 Port Al Azif if.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_DBRestore(); return false">DB Restore</button>
+	<button onMouseOver="msgs.innerHTML='Save Data Restore v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_SaveDataRestore(); return false">Save Data Restore</button>
+	<button onMouseOver="msgs.innerHTML='Trophy Backup Restore v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_TrophyRestore(); return false">Trophy Restore</button>
+	<button onMouseOver="msgs.innerHTML='Prb 7.55 Exploit Menu Offline Cache Restore.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_OfflineCacheRestore(); return false">Prb 7.55 Cache Restore</button>
+	<button onMouseOver="msgs.innerHTML='Restore Any Offline Cache v1.0 - By Stooged Restore any ApplicationCache.db from USB Just place the ApplicationCache.db on the root of a usb drive.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_AnyCacheRestore(); return false">Any Cache Restore</button>
 	<br><div style='font-size:20px;color:yellow'>DUMPER</div>
-	<button onMouseOver="msgs.innerHTML='Dump Game Only v1.8 - Original Version By xVortex / 7.55 Port Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_dumperg(); return false">Dump Game Only</button>
-	<button onMouseOver="msgs.innerHTML='Dump Game & Update v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_dumpergu(); return false">Dump Game & Update</button> 
-	<button onMouseOver="msgs.innerHTML='Dump Update Only v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_dumperu(); return false">Dump Update Only</button> 
-	<button onMouseOver="msgs.innerHTML='Dump & Merge Game + Update v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_dumperm(); return false">Dump & Merge Game</button> 
-	<button onMouseOver="msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_kerneldumper(); return false">Kernel Dumper</button>
-	<button onMouseOver="msgs.innerHTML='Module-Dumper - v1.0 Original By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_moduledumper(); return false">Module Dumper</button>
+	<button onMouseOver="msgs.innerHTML='Dump Game Only v1.8 - Original Version By xVortex / 7.55 Port Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_dumperg(); return false">Dump Game Only</button>
+	<button onMouseOver="msgs.innerHTML='Dump Game & Update v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_dumpergu(); return false">Dump Game & Update</button> 
+	<button onMouseOver="msgs.innerHTML='Dump Update Only v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_dumperu(); return false">Dump Update Only</button> 
+	<button onMouseOver="msgs.innerHTML='Dump & Merge Game + Update v1.8 - Original Version By xVortex / 7.55 Port and Mod By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_dumperm(); return false">Dump & Merge Game</button> 
+	<button onMouseOver="msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 7.55 Port By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_kerneldumper(); return false">Kernel Dumper</button>
+	<button onMouseOver="msgs.innerHTML='Module-Dumper - v1.0 Original By Al Azif.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_moduledumper(); return false">Module Dumper</button>
 	<br><div style='font-size:20px;color:yellow'>SPOOF TARGET ID / LINUX</div>
-	<button onMouseOver="msgs.innerHTML='Enable-Dex v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_enabledex(); return false">To-Dex</button>
-	<button onMouseOver="msgs.innerHTML='Enable-Dev v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_enabledev(); return false">To-Dev</button> 
-	<button onMouseOver="msgs.innerHTML='Enable-Kratos v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_enablekratos(); return false">To-Kratos</button> 
-	<button onMouseOver="msgs.innerHTML='Back-To-Retail v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_backtoretail(); return false">Back To Retail</button>
-	<button onMouseOver="msgs.innerHTML='Spoof Firmware v1.0 - By Leeful Spoof your firmware to V8.05.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_FWspoof(); return false">Spoof Firmware v8.05</button>&nbsp; / &nbsp;
-	<button onMouseOver="msgs.innerHTML='Linux 1gb - By Sleirsgoevy Load a Linux Distribution from USB.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_Linux1gb(); return false">Linux 1gb</button>
-	<button onMouseOver="msgs.innerHTML='Linux 3gb - By Sleirsgoevy Load a Linux Distribution from USB.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_Linux3gb(); return false">Linux 3gb</button>
+    <button onMouseOver="msgs.innerHTML='Enable-Dex v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_enabledex(); return false">To-Dex</button>
+    <button onMouseOver="msgs.innerHTML='Enable-Dev v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_enabledev(); return false">To-Dev</button> 
+    <button onMouseOver="msgs.innerHTML='Enable-Kratos v1.0 - By notzecoxao.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_enablekratos(); return false">To-Kratos</button> 
+	<button onMouseOver="msgs.innerHTML='Back-To-Retail v1.0 - By Leeful.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_backtoretail(); return false">Back To Retail</button>
+	<button onMouseOver="msgs.innerHTML='Spoof Firmware v1.0 - By Leeful Spoof your firmware to V8.05.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_FWspoof(); return false">Spoof Firmware v8.05</button>&nbsp; / &nbsp;
+	<button onMouseOver="msgs.innerHTML='Linux 1gb - By Sleirsgoevy Load a Linux Distribution from USB.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_Linux1gb(); return false">Linux 1gb</button>
+    <button onMouseOver="msgs.innerHTML='Linux 3gb - By Sleirsgoevy Load a Linux Distribution from USB.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite'" onclick="load_Linux3gb(); return false">Linux 3gb</button>
 	<br><div style='font-size:20px;color:yellow'>GAME MODS</div>
-	<button onMouseOver="msgs.innerHTML='WebRTE v1.0 - By PS4 Trainer.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_webrte(); return false">WebRTE</button>
-	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.00 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"; onclick="load_gtava1(); return false">ArabicGuy GTA V v1.00</button>
-	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.27 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_gtava2(); return false">ArabicGuy GTA V v1.27</button>
-	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.32 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_gtava3(); return false">ArabicGuy GTA V v1.32</button>
-	<button onMouseOver="msgs.innerHTML='Lamance GTA V v1.32 - By david1337hax.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_gtavl(); return false">Lamance GTA V v1.32</button>
-	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.00 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'"; onclick="load_gtavn1(); return false">NativeCaller GTA V v1.00</button>
-	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.27 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_gtavn2(); return false">NativeCaller GTA V v1.27</button>
-	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.32 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_gtavn3(); return false">NativeCaller GTA V v1.32</button>
+	<button onMouseOver="msgs.innerHTML='WebRTE v1.0 - By PS4 Trainer.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_webrte(); return false">WebRTE</button>
+	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.00 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"; onclick="load_gtava1(); return false">ArabicGuy GTA V v1.00</button>
+	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.27 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_gtava2(); return false">ArabicGuy GTA V v1.27</button>
+	<button onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.32 - Original Version By RF0oDxM0Dz.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_gtava3(); return false">ArabicGuy GTA V v1.32</button>
+	<button onMouseOver="msgs.innerHTML='Lamance GTA V v1.32 - By david1337hax.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_gtavl(); return false">Lamance GTA V v1.32</button>
+	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.00 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'"; onclick="load_gtavn1(); return false">NativeCaller GTA V v1.00</button>
+	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.27 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_gtavn2(); return false">NativeCaller GTA V v1.27</button>
+	<button onMouseOver="msgs.innerHTML='NativeCaller GTA V v1.32 - Original Version.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_gtavn3(); return false">NativeCaller GTA V v1.32</button>
 	<br><div style='font-size:20px;color:yellow'>FAN CONTROL</div>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 50c.Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol50(); return false">fan 50c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 55c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol55(); return false">fan 55c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 60c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol60(); return false">fan 60c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 65c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol65(); return false">fan 65c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol70(); return false">fan 70c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 75c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol75(); return false">fan 75c</button>
-	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 80c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4B2 SL Test'" onclick="load_fancontrol80(); return false">fan 80c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 50c.Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol50(); return false">fan 50c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 55c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol55(); return false">fan 55c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 60c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol60(); return false">fan 60c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 65c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol65(); return false">fan 65c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol70(); return false">fan 70c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 75c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol75(); return false">fan 75c</button>
+	<button onMouseOver="msgs.innerHTML='Fan Control Set Temp 80c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 SL'" onclick="load_fancontrol80(); return false">fan 80c</button>
 	<div style="text-align:center;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:white">Massive Thanks - Leeful - KiiWii - Sleirsgoevy - theflow - Al Azif - Joonie86 - And Many More</div>
-</div>   
+   </div>   
  <script>
-UA = navigator.userAgent.substring(navigator.userAgent.indexOf("0.00 (") + 28, navigator.userAgent.indexOf(") Apple"));
-if (UA == "7.55"){PS4fw.innerHTML="v"+UA+" Detected"};if(UA != "7.55"){PS4fw.innerHTML="Spoofed To v"+UA};
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
 function loadScript2(){getScript("common/exp_loaderPL.js",function(){});}
 </script>
 <script>
 function start1(){
-if (sessionStorage.kexSELECT==null){
-expbuttons.style.display="none";
-kexmenu.style.display="block";
-kexbut1.style.display="none";
-};
-if (sessionStorage.kexSELECT!=null){go();}
-
+	if (sessionStorage.kexSELECT==null){
+	expbuttons.style.display="none";
+	kexmenu.style.display="block";
+	kexbut1.style.display="none";
+	};
+	if (sessionStorage.kexSELECT!=null){go();}
 }
 function start2(){
 sessionStorage.kexSELECT="1";
@@ -156,7 +150,7 @@ kexmenu.style.display="none";
 window.location.href=window.location.href;
 }
 
-if (localStorage.kexID==null)localStorage.kexID="v2";
+if (localStorage.kexID==null)localStorage.kexID="v3";
 if (localStorage.autoID==null)localStorage.autoID="a2";
 document.getElementById(localStorage.kexID).checked=true;
 document.getElementById(localStorage.autoID).checked=true;
@@ -178,13 +172,13 @@ window.failCounter.innerHTML=localStorage.failcount;
 function load_exploit(){
 msgs.innerHTML="Running Kernel Exploit "+localStorage.kexID+" Please Wait ...";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript(localStorage.kexVAL,function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript(localStorage.kexVAL,function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function auto_load_exploit(){
 msgs.innerHTML="Auto Loading Kernel Exploit "+localStorage.kexID+" Please Wait ...";
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript(localStorage.kexVAL,function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript(localStorage.kexVAL,function(){setTimeout(jailbreak,1000);});}loadScript();
 setTimeout(function(){mymenu.style.opacity="1";kexmenu.style.opacity="1";mymenu2.style.opacity="1";},2000);
 }
 
